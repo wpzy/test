@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="model.ContextInfoModel" table="contextinfo">
+
+      <id name="ArchivedID" type="string" column="ArchivedID">
+      </id>
+      <property name="AdminBG" column="AdminBG" type="string"/>
+      <property name="CreateReason" column="CreateReason" type="string"/>
+      <property name="ISDescription" column="ISDescription" type="string"/>
+      <property name="ISLegalDescription" column="ISLegalDescription" type="string"/>
+      <property name="ISEnvironment" column="ISEnvironment" type="string"/>
+      <property name="ProcessType" column="ProcessType" type="string"/>
+      <property name="Processor" column="Processor" type="string"/>
+      <property name="ReceiveDate" column="ReceiveDate" type="date"/>
+      <property name="ProcessDate" column="ProcessDate" type="date"/>
+      <property name="SendDate" column="SendDate" type="date"/>
+      <property name="DraftDate" column="DraftDate" type="date"/>
+      <property name="ExaminedDate" column="ExaminedDate" type="date"/>
+      <property name="SignDate" column="SignDate" type="date"/>
+      <property name="ProcessView" column="ProcessView" type="string"/>
+      <property name="Drafter" column="Drafter" type="string"/>
+      <property name="Examiner" column="Examiner" type="string"/>
+      <property name="LegalBG" column="LegalBG" type="string"/>
+      
+   </class>
+</hibernate-mapping>

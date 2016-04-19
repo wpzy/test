@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="adminAction" class="action.AdminAction">
+		<property name="adminBo" ref="adminBo" />	
+	</bean>
+
+	<bean id="adminBo" class="bo.imp.AdminBoImp" >
+		<property name="adminDAO" ref="adminDAO" />
+	</bean>
+	
+   	<bean id="adminDAO" class="dao.imp.AdminDaoImp" >
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	
+	<bean id="queryAction" class="action.QueryAction">
+		<property name="cimBo" ref="cimBo" />	
+	</bean>
+
+	<bean id="cimBo" class="bo.imp.ContextInfoModelBoImp" >
+		<property name="ContextInfoModelDAO" ref="ContextInfoModelDAO" />
+	</bean>
+	
+   	<bean id="ContextInfoModelDAO" class="dao.imp.ContextInfoModelDaoImp" >
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+
+</beans>
